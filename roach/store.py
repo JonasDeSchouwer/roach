@@ -77,7 +77,7 @@ class Store:
         )
 
 
-def iter_stores(parent):
+def iter_stores(parent) -> list[tuple[str, "Store"]]:
     parent = Path(parent).expanduser()
     out = []
     for path in sorted(parent.glob("*")):
